@@ -1,0 +1,4 @@
+# Requires Python >= 3.11 and a separately installed AppWorld environment.
+pydantic>=2.10,<3
+python-dotenv>=1.0,<2
+neo4j>=5.18,<6

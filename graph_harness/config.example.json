@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "runtime": {
+    "python_executable": "python",
+    "appworld_root": "../appworld",
+    "output_root": "./outputs",
+    "background": true,
+    "fail_on_insecure_config_permissions": false
+  },
+  "run": {
+    "mode": "online",
+    "dataset": "dev",
+    "train_tasks": 0,
+    "test_tasks": 1,
+    "test_task_ids": [],
+    "task_selection_seed": 17,
+    "max_steps": 100,
+    "max_rejections": 5,
+    "max_rollbacks": 4,
+    "max_action_retries": 1,
+    "max_decision_rollbacks": 2,
+    "task_target_tracking": false,
+    "completion_verification": false,
+    "completion_evidence_read_budget": 2,
+    "stop_on_technical_failure": true,
+    "run_official_evaluation": true
+  },
+  "model": {
+    "api_key_env": "MODEL_API_KEY",
+    "base_url": "http://127.0.0.1:8000/v1",
+    "name": "your-model",
+    "temperature": 1,
+    "generation_seed": null,
+    "max_output_tokens": 8192,
+    "enable_thinking": true,
+    "sampling": {
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0,
+      "presence_penalty": 0,
+      "repetition_penalty": 1
+    }
+  },
+  "neo4j": {
+    "enabled": true,
+    "uri": "bolt://127.0.0.1:17687",
+    "username": "neo4j",
+    "password_env": "NEO4J_PASSWORD",
+    "database": "neo4j",
+    "graph_version": "neo4j-live-unversioned"
+  }
+}
